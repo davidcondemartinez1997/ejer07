@@ -10,7 +10,8 @@ namespace ejer07Test
         [TestMethod]
         public void TestGuardarNumero()
         {
-            FicheroService.GuardarNumero(5);
+            FicheroService sut = new FicheroService();
+            sut.GuardarNumero(5);
             Assert.IsTrue(FicheroUtil.IsLlamado());
         }
     }

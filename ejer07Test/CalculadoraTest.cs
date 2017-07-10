@@ -16,7 +16,9 @@ namespace ejer07Test
         [TestMethod]
         public void TestSumar()
         {
-            int res = Calculadora.Sumar(4,5);
+            Calculadora sut = new Calculadora();
+
+            int res = sut.Sumar(4,5);
 
             Assert.AreEqual(9, res);
         }

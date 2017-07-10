@@ -11,16 +11,28 @@ namespace ejer07Test
         public void TestSumarConFichero()
         {
             CalculadoraConFichero sut = new CalculadoraConFichero();
+            sut.calculadora = new CalculadoraDel9();
+            sut.ficheroService = new FIcheroServiceDeMentira();
             sut.SumarGuardando(3, 2);
 
-        }
 
-        [TestMethod]
-        public void TestCamposEstaticos()
+        }
+    }
+
+    [TestClass]
+    public class CalculadoraDel9 : ICalculadora
+    {
+        public int Sumar(int A, int B)
         {
-            CalculadoraConFichero instancia1 = new CalculadoraConFichero();
-            CalculadoraConFichero instancia2 = new CalculadoraConFichero();
-            CalculadoraConFichero instancia3 = new CalculadoraConFichero();
+            return 9;
+        }
+    }
+
+    public class FIcheroServiceDeMentira : IFicheroService
+    {
+        public void GuardarNumero(object Res)
+        {
+           
         }
     }
 }

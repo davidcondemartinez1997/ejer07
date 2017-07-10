@@ -9,13 +9,16 @@ namespace ejer07
     public class CalculadoraConFichero
     {
 
+        public ICalculadora calculadora { get; set; }
+
+        public IFicheroService ficheroService { get; set; }
+
         public void SumarGuardando(int A, int B)
         {
-            int res = Calculadora.Sumar(A, B);
+            int c = calculadora.Sumar(A, B);
 
-            FicheroService.GuardarNumero(res);
+            ficheroService.GuardarNumero(c);
         }
-
 
     }
 }

@@ -44,6 +44,8 @@
     <Compile Include="Calculadora.cs" />
     <Compile Include="FicheroService.cs" />
     <Compile Include="FicheroUtil.cs" />
+    <Compile Include="ICalculadora.cs" />
+    <Compile Include="IFicheroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

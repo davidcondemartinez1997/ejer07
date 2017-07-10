@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ejer07
 {
-    public class Calculadora
+    public class Calculadora : ICalculadora
     {
         /// <summary>
         /// Metodo de suma de numeros enteros
@@ -14,7 +14,7 @@ namespace ejer07
         /// <param name="A">Primer sumando</param>
         /// <param name="B">Segundo sumando</param>
         /// <returns></returns>
-        public static int Sumar(int A, int B)
+        public int Sumar(int A, int B)
         {
             return A + B;
         }
